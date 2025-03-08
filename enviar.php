@@ -11,10 +11,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Envia o e-mail
     if (mail($destinatario, $assunto, $corpo, $headers)) {
-        echo "<script>alert('Mensagem enviada com sucesso!'); window.location.href = 'index.html';</script>";
+        // Redireciona para a página de sucesso, evitando o reenvio
+        header("Location: index.html?success=1");
+        exit; // Garanta que o script pare aqui
     } else {
-        echo "<script>alert('Erro ao enviar. Tente novamente.'); window.location.href = 'index.html';</script>";
+        // Redireciona para a página de erro
+        header("Location: index.html?error=1");
+        exit;
     }
 }
-
 ?>
+
