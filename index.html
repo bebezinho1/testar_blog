@@ -150,12 +150,22 @@
         </p>
         <p><i class="fas fa-map-marker-alt"></i> Centro - Extremoz/RN</p>
       </div>
-      <form action="enviar.php" method="POST">
-        <input type="text" name="nome" placeholder="Nome" required />
-        <input type="email" name="email" placeholder="E-mail" required />
-        <textarea name="mensagem" placeholder="Mensagem" rows="5" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+     <!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/xwpleywg"
+  method="POST"
+>
+  <label>
+    Seu email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Sua Mensagem:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Enviar</button>
+</form>
     </div>
   </div>
     <script>
