@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $destinatario = "contato@drasilva.com"; // Substitua pelo e-mail do psicólogo
+    $destinatario = "a12408570@gmail.com"; // Substitua pelo e-mail do psicólogo
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $mensagem = $_POST["mensagem"];
@@ -16,4 +16,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('Erro ao enviar. Tente novamente.'); window.location.href = 'index.html';</script>";
     }
 }
+
 ?>
